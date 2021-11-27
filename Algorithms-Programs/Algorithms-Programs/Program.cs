@@ -11,7 +11,7 @@ namespace Algorithms_Programs
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Permutation Program, 2-Binary Search,3-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Permutation Program, 2-Binary Search,3-Insertion Sort,4-Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -28,6 +28,12 @@ namespace Algorithms_Programs
                         BinarySearch.BinarySearchWord(words);
                         break;
                     case 3:
+                        InsertionSort insertionSort = new InsertionSort();
+                        int[] arr = { 10, 2, 14, 3, 1, 5, 9 };
+                        insertionSort.Sort(arr);
+                        insertionSort.PrintArray(arr);                        
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
