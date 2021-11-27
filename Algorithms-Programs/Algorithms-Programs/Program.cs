@@ -11,7 +11,7 @@ namespace Algorithms_Programs
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Permutation Program, 2-Binary Search,3-Insertion Sort,4-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Permutation Program, 2-Binary Search, 3-Insertion Sort, 4-Bubble Sort, 5-Merge Sort, 6-Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -39,6 +39,11 @@ namespace Algorithms_Programs
                         BubbleSort.PrintArray(arr1);
                         break;
                     case 5:
+                        int[] arr2 = { 32, 12, 9, 65, 24, 5 };
+                        MergeSort.Sort(arr2, 0, arr2.Length - 1);
+                        MergeSort.PrintArray(arr2);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
